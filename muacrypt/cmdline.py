@@ -22,6 +22,7 @@ from .account import AccountManager, AccountNotFound, effective_date, parse_date
 from .bingpg import find_executable
 from . import mime, hookspec
 from .bot import bot_reply
+from .alice import alice_reply
 
 
 @click.command(cls=MyGroup, context_settings=dict(help_option_names=["-h", "--help"]))
@@ -576,6 +577,7 @@ muacrypt_main.add_command(make_header)
 muacrypt_main.add_command(export_public_key)
 muacrypt_main.add_command(export_secret_key)
 muacrypt_main.add_command(bot_reply)
+muacrypt_main.add_command(alice_reply)
 muacrypt_main.add_command(destroy_all)
 
 
